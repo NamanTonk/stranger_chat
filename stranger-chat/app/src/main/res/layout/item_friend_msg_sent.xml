@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="120.0sp"
+    android:paddingTop="10.0sp"
+    android:paddingRight="10.0sp">
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+        android:id="@+id/text_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+       android:padding="5dp"
+        android:autoLink="all"
+        android:background="@drawable/shape_primary"
+        android:linksClickable="true"
+       android:gravity="left"
+        android:text="hello, hello! yut yt yt yt y y yu y uy yut y"
+        android:textColor="#ffffffff"
+        android:textColorLink="#ffffffff"
+        android:textSize="17.0sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_message"
+        android:layout_alignRight="@+id/text_message"
+        android:layout_marginTop="1.0sp">
+
+        <TextView
+            android:textColor="#E1E0E0E0"
+            android:id="@+id/msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2.0sp"
+            android:text="10:45"
+            android:textSize="9.0sp" />
+
+        <ImageView
+            android:id="@+id/sent"
+            android:layout_width="14.0sp"
+            android:layout_height="14.0sp"
+            android:layout_alignBottom="@+id/msg_time"
+            android:layout_toRightOf="@+id/msg_time"
+            android:src="@drawable/sent_status" />
+
+        <ImageView
+            android:id="@+id/delivered"
+            android:layout_width="14.0sp"
+            android:layout_height="14.0sp"
+            android:layout_alignBottom="@+id/msg_time"
+            android:layout_toRightOf="@+id/msg_time"
+            android:src="@drawable/delivered_status" />
+
+        <ImageView
+            android:id="@+id/seen"
+            android:layout_width="14.0sp"
+            android:layout_height="14.0sp"
+            android:layout_alignBottom="@+id/msg_time"
+            android:layout_toRightOf="@+id/msg_time"
+            android:src="@drawable/ic_double_tick_indicator" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="120.0sp"
+    android:paddingTop="10.0sp"
+    android:paddingRight="10.0sp">
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:autoLink="all"
+        android:background="@drawable/shape_primary"
+        android:linksClickable="true"
+        android:padding="10.0sp"
+        android:text="hello, hello! yut yt yt yt y y yu y uy yut y"
+        android:textColor="#ffffffff"
+        android:textColorLink="#ffffffff"
+        android:textSize="17.0sp" />
+
+    <ImageView
+        android:layout_width="10.0sp"
+        android:layout_height="10.0sp"
+        android:layout_alignRight="@+id/text_message"
+        android:layout_alignBottom="@+id/text_message"
+        android:layout_marginRight="4.0sp"
+        android:layout_marginBottom="2.0sp"
+        android:src="@drawable/delivered_white" />
+</RelativeLayout>

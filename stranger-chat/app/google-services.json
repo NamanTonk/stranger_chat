@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "513505452025",
+    "firebase_url": "https://stranger-chat-65228.firebaseio.com",
+    "project_id": "stranger-chat-65228",
+    "storage_bucket": "stranger-chat-65228.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513505452025:android:f6773a6321014d6a",
+        "android_client_info": {
+          "package_name": "com.newEra.strangers.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513505452025-u1i8kbbb453blrmfnerd6cb8jra1kugt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.newEra.strangers.chat",
+            "certificate_hash": "d6cdba201f7e14ce959160702c9611a29c43bd24"
+          }
+        },
+        {
+          "client_id": "513505452025-2qho6fqppi5m6t4knai2nl9ianfdbqpi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA48sVEC9iizOTLLNIHczXH2nzZjVM_ZDs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513505452025-2qho6fqppi5m6t4knai2nl9ianfdbqpi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

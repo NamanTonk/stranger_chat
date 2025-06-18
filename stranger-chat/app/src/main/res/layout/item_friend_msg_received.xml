@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="10.0sp"
+    android:paddingTop="10.0sp"
+    android:paddingRight="120.0sp">
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+        emojicon:emojiconSize="28sp"
+        android:id="@+id/text_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:autoLink="all"
+        android:background="@drawable/shape_message_white"
+        android:linksClickable="true"
+        android:padding="10.0sp"
+        android:text="hi man tttttttttttttttttttttttt, how are you?"
+        android:textColor="#ff000000"
+        android:textSize="17.0sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_message"
+        android:layout_alignLeft="@+id/text_message"
+        android:layout_marginTop="1.0sp">
+
+        <TextView
+         android:textColor="#E1E0E0E0"
+            android:id="@+id/msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:45"
+            android:textSize="9.0sp" />
+    </RelativeLayout>
+</RelativeLayout>

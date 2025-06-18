@@ -1,0 +1,153 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/new_background">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_chat" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#00000000"
+        android:paddingRight="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_picture"
+                android:layout_width="50.0sp"
+                android:layout_height="50.0sp"
+                android:layout_centerVertical="true"
+                app:civ_border_color="#ffffffff"
+                app:civ_border_width="0.0sp" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/profile_picture"
+                android:paddingLeft="10.0sp"
+                android:text="Strangers"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/bc_logo"
+                android:layout_width="10.0sp"
+                android:layout_height="10.0sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/toolbar_title" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/end_chat"
+                android:layout_width="25.0sp"
+                android:layout_height="25.0sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/fb_top_banner"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginTop="55dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/input_box_layouts" />
+
+        <LinearLayout
+            android:id="@+id/input_box_layouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="15.0sp"
+                android:paddingTop="10.0sp"
+                android:paddingRight="15.0sp"
+                android:paddingBottom="5.0sp">
+
+                <ImageView
+                    android:id="@+id/image_browse"
+                    android:layout_width="25.0sp"
+                    android:layout_height="25.0sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0sp"
+                    android:src="@drawable/ic_picture" />
+
+                <ImageView
+                    android:id="@+id/image_camera"
+                    android:layout_width="25.0sp"
+                    android:layout_height="25.0sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0sp"
+                    android:layout_toRightOf="@+id/image_browse"
+                    android:src="@drawable/ic_photo_camera" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_camera"
+                    android:background="@drawable/shape_message_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="2dp">
+
+                    <ImageView
+                        android:id="@+id/ic_cute"
+                        android:layout_width="30.0sp"
+                        android:layout_height="40.0sp"
+                        android:layout_gravity="center"
+                        android:paddingLeft="3dp"
+                        android:src="@drawable/ic_cute" />
+
+                    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                        android:id="@+id/et_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="5"
+                        android:gravity="left"
+                        android:hint="Type here.."
+                        android:windowSoftInputMode="stateVisible" />
+
+                    <ImageView
+                        android:id="@+id/btn_send"
+                        android:layout_width="match_parent"
+                        android:layout_height="30.0sp"
+                        android:layout_gravity="center"
+                        android:layout_weight="15"
+                        android:padding="1dp"
+                        android:src="@drawable/ic_send_button" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

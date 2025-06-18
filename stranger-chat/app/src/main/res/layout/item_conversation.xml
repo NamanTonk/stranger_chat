@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="7.0sp">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="60.0sp"
+        android:layout_height="60.0sp"
+        app:civ_border_color="#ffffffff"
+        app:civ_border_width="0.0sp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_image"
+        android:layout_marginLeft="15.0sp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:text="Some Name"
+        android:textColor="#ffffff"
+        android:textSize="20.0sp" />
+
+    <Button
+
+        android:id="@+id/online_status"
+        android:layout_width="10.0sp"
+        android:layout_height="10.0sp"
+        android:layout_marginLeft="10.0sp"
+        android:layout_marginTop="10.0sp"
+        android:layout_toRightOf="@+id/name"
+        android:background="@drawable/shape_online" />
+
+    <TextView
+        android:textSize="11dp"
+        android:textColor="#ffffff"
+        android:id="@+id/last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="15.0sp"
+        android:layout_marginTop="5.0sp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:text="Hello, How are you?" />
+
+    <TextView
+        android:textColor="#ffff"
+        android:id="@+id/last_msg_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/name"
+        android:layout_alignParentRight="true"
+        android:padding="5.0sp"
+        android:text="1 min ago" />
+</RelativeLayout>

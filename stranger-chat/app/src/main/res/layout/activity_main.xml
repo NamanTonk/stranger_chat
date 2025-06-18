@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_on_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/new_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="2dp"
+        android:background="#00000000"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--android:background="?colorPrimary"-->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/logo"
+                android:fontFamily="@font/brandon"
+                android:paddingLeft="10.0sp"
+                android:text="Chat With Strangers"
+                android:textColor="#ffffffff"
+                android:textSize="25.0sp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:id="@+id/count_chat_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/friends"
+                        android:layout_width="25.0sp"
+                        android:layout_height="25.0sp"
+                        android:src="@drawable/friends_icon" />
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="22.0sp"-->
+                    <Button
+                        android:id="@+id/unseen_msg_count"
+                        android:layout_width="16.0sp"
+                        android:layout_height="16.0sp"
+                        android:layout_alignTop="@+id/friends"
+                        android:layout_toRightOf="@+id/friends"
+                        android:background="@drawable/shape_notification_count"
+                        android:text="150"
+                        android:textColor="@color/colorBackground"
+                        android:textSize="8.0sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="80.0sp"
+                    android:layout_height="40.0sp"
+                    android:layout_gravity="center|left"
+                    android:background="@drawable/new_background_save_buttons"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textColor="#ffffffff"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:background="#00000000"
+        android:layout_above="@+id/nickname_box_layout"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_url"
+            android:layout_width="250.0sp"
+            android:layout_height="250.0sp"
+            app:civ_border_color="#ffffffff"
+            app:civ_border_width="1.0sp" />
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/image_Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/nickname_box_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="15.0sp"
+        android:paddingTop="10.0sp"
+        android:paddingRight="15.0sp"
+        android:paddingBottom="10.0sp">
+
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/brandon"
+            android:gravity="center|top"
+            android:hint="Enter Your Name"
+            android:maxLength="25"
+            android:paddingTop="8.0sp"
+            android:paddingBottom="8.0sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#fff"
+            android:textColorHint="#6AFFFFFF"
+            android:textSize="30.0sp"
+            android:textStyle="bold" />
+        <View
+            android:id="@+id/view_click"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <!--<Button-->
+    <!--android:id="@+id/save"-->
+    <!--android:layout_width="80.0sp"-->
+    <!--android:layout_height="40.0sp"-->
+    <!--android:layout_below="@+id/nickname_box_layout"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/new_background_save_buttons"-->
+    <!--android:text="Save"-->
+    <!--android:textColor="#ffffffff"-->
+    <!--android:textSize="15.0sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <RelativeLayout
+        android:id="@+id/adViewTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/adViewBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/new_background_save_buttons"
+        android:padding="10.0sp"
+        android:text="Start Chat"
+        android:textColor="#ffffffff"
+        android:textSize="18.0sp"
+        android:textStyle="bold" />
+</RelativeLayout>
